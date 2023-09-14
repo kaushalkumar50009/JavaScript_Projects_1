@@ -1,0 +1,58 @@
+/* Style the "check something" button */
+#cl {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#cl:hover {
+  background-color: #0056b3;
+}
+
+/* Style the links in the list */
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #0056b3;
+}
+
+.links {
+  display: none;
+  /* height: 0;
+    overflow: hidden; */
+}
+
+.show_links {
+  display: block;
+  /* height: 10rem; */
+}
+
+@media (min-width: 700px) {
+  .links {
+    display: block;
+    height: auto;
+  }
+
+  /* .show_links {
+        display: none;
+    } */
+
+  .cl {
+    display: none;
+  }
+}

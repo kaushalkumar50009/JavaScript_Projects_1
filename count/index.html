@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="total" id="total">0</h1>
+        <div class="button-container">
+            <button class="inc btn">increment</button>
+            <button class="res btn">reset</button>
+            <button class="dec btn">decrement</button>
+            </button>
+    </main>
+
+    <script>
+        const total = document.querySelector('.total')
+        const btns = document.querySelectorAll('.btn')
+        // console.log(btns)
+
+
+        let count = 0
+
+        // btns.forEach(function (item) {
+        //     console.log(item)
+        // })
+
+
+        // btns.forEach(function (btn) {
+        //     btn.addEventListener('click', function (e) {
+        //         console.log(e.currentTarget.classList)
+        //     })
+        // })
+
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+
+                const styles = e.currentTarget.classList
+                if (styles.contains('inc')) {
+
+                    count++
+
+                    // console.log(count++)
+                } else if (styles.contains('dec')) {
+                    count--
+
+                }
+
+                else {
+                    count = 0
+                }
+
+
+                // if (total > 0) {
+                //     // total.style.color = 'green'
+                //     console.log("you are green")
+                // }
+
+
+                total.innerText = count
+
+
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+</head>
+
+<body>
+    <main>
+        <p class="total" id="total">0</p>
+        <button id="inc_btn">increment</button>
+        <button id="res_btn">reset</button>
+        <button id="dec_btn">decrement</button>
+    </main>
+
+    <script>
+        const total = document.querySelector('.total')
+        const inc = document.getElementById('inc_btn')
+        const res = document.getElementById('res_btn')
+        const dec = document.getElementById('dec_btn')
+
+        let count = 0
+
+        inc.addEventListener('click', function () {
+            count++
+
+            // if (count <= 0) {
+            //     count++
+            // }
+            total.innerText = count
+
+        })
+        res.addEventListener('click', function () {
+            count = 0
+
+            // if (count <= 0) {
+            //     count++
+            // }
+            total.innerText = count
+
+        })
+        dec.addEventListener('click', function () {
+
+            if (count > 0) {
+                count--
+            }
+            total.innerText = count
+
+        })
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+</head>
+
+<body>
+    <main>
+        <p class="total" id="total"></p>
+        <button id="inc_btn">increment</button>
+        <button id="res_btn">reset</button>
+        <button id="dec_btn">decrement</button>
+    </main>
+
+    <script>
+        const total = document.querySelector('.total');
+        const inc = document.getElementById('inc_btn');
+        const res = document.getElementById('res_btn');
+        const dec = document.getElementById('dec_btn');
+
+        let count = 0;  // declare count outside of the event listener function
+
+        inc.addEventListener('click', function () {
+            count++;  // increment count
+            total.innerText = count;
+        });
+
+        res.addEventListener('click', function () {
+            count = 0;  // reset count to zero
+            total.innerText = count;
+        });
+
+        dec.addEventListener('click', function () {
+            if (count > 0) {
+                count--;  // decrement count if it is greater than zero
+                total.innerText = count;
+            }
+        });
+    </script>
+</body>
+
+</html> -->

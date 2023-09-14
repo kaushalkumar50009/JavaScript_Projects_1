@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 100px;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 90vw;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 80vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+        }
+
+        .modal {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            /* top: 60%; */
+            /* left: 50%; */
+            width: 100vw;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            /* display: none; */
+            /* z-index: -1; */
+            background-color: #00000078;
+
+        }
+
+
+
+
+        .modal_content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+
+            width: 50vw;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 50vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+
+        }
+
+        .show_modal .modal_content {
+            animation: slide ease .8s;
+
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateY(-30rem);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .show_modal {
+            visibility: visible;
+            /* display: block; */
+            /* z-index: 1; */
+            /* animation: slide ease .8s; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main" id="main_con">
+            hii helllo i am main page
+
+            <div class="btn">
+                <button class="open_modal">
+                    Open Modal
+                </button>
+            </div>
+
+        </div>
+
+        <div class="modal">
+            <div class="modal_content">
+                <div class="h3">
+                    hii i am modal
+                </div>
+                <div class="btn">
+                    <button class="close_modal">
+                        close Modal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let openModalBtn = document.querySelector('.open_modal')
+        let modals = document.querySelector('.modal')
+        let close_modal = document.querySelector('.close_modal')
+
+        let closeFromAnywhere = document.getElementById("main_con")
+
+        openModalBtn.addEventListener('click', function () {
+            console.log(modals.classList)
+
+            // if (modals.classList.contains('show_modal')) {
+
+            //     modals.classList.remove('show_modal')
+            // } else {
+            //     modals.classList.add('show_modal')
+            // }
+
+            modals.classList.toggle('show_modal')
+
+            // modals.classList.add('show_modal')
+
+        })
+
+        close_modal.addEventListener('click', function () {
+
+            modals.classList.remove('show_modal')
+
+            // modals.classList.toogle('show_modal')
+        })
+
+        modals.addEventListener('click', function () {
+
+            modals.classList.remove('show_modal')
+            // console.log("hii")
+
+            // modals.classList.toogle('show_modal')
+        })
+
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+<body>
+    <header>
+        <h1><span>Lets</span> Create a Modal!!!</h1>
+        <p>Click Button Below</p>
+    </header>
+
+    <section>
+        <div class="container">
+            <form action="">
+                <button id="btn" class="btn">TEST POPUP</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Hello World!!!</h1>
+            <hr />
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A repudiandae
+                ad repellendus totam mollitia quam voluptatibus odit quos corrupti,
+                quas sed illum ab tenetur fuga asperiores, quae ipsum dicta minima.
+                Dicta assumenda error esse ut, accusamus commodi quo aperiam quam ea
+                alias nobis unde laborum similique deserunt, dolore vel. Magnam.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // VARIABLES
+        const modal = document.querySelector(".modal"),
+            btn = document.querySelector(".btn");
+        // close = document.querySelector(".close");
+
+        btn.addEventListener("click", openModal);
+        // close.addEventListener("click", closeModal);
+        // modal.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", (e) => {
+            const evt = e.target.classList;
+            if (evt.contains("modal") || evt.contains("close")) {
+                closeModal();
+            }
+        });
+
+        // OPEN MODAL
+        function openModal(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+        }
+        // CLOSE MODAL
+        function closeModal() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html> -->

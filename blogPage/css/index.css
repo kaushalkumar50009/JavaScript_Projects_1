@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  background-color: #002d1c;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: #002d1c 0px 8px 28px 27px;
+}
+
+.main_body {
+  flex-grow: 1;
+  background-color: #011e00;
+  margin: 30px 0px;
+}
+
+.card_container {
+  padding: 1rem;
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 20rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+
+  border-radius: 5px;
+  color: #ffffff;
+  backdrop-filter: blur(30px);
+  box-shadow: #376f00 7px 7px 26px;
+  background-color: #012016;
+}
+
+.title {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.blog_image img {
+  width: 18rem;
+  border-radius: 10px 10px 0px 0px;
+  height: 16rem;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: #c7ff00 2px 0px 10px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002d1c;
+  color: #ffffff;
+  box-shadow: #002d1c 0px 8px 28px 44px;
+  font-size: 21px;
+  padding: 1rem;
+  line-height: 36px;
+}
+
+/* ! modal  */
+.hide_modal {
+  display: none !important ;
+}
+
+.show_modal {
+  display: block !important ;
+}
+
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 223, 156, 0.23);
+  z-index: 1;
+  overflow: auto;
+  backdrop-filter: blur(20px);
+}
+
+.form {
+  background-color: #16715387;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  position: sticky;
+  top: 15%;
+  left: 40%;
+  animation: scale-up-hor-center 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  width: 40rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  backdrop-filter: blur(30px);
+  box-shadow: 7px 10px 10px;
+}
+
+.message_with_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: red;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-variant: all-small-caps;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 5px;
+}
+.hide_modal_btn {
+  align-self: flex-end;
+}
+
+.blog-title,
+.blog-desc,
+.description,
+.image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+label {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-variant: all-small-caps;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffffff;
+}
+
+#title,
+#small_desc,
+textarea {
+  padding: 3px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #318625;
+  font-size: large;
+  letter-spacing: 1px;
+  color: #197100;
+}
+
+#small_description {
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+input[type="file"] {
+  color: #c9fff2;
+  padding: 3px;
+  border-radius: 5px;
+  border: 2px solid #318625;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="text"] {
+  height: 2.6rem;
+}
+
+#submit_btn,
+.hide_modal_btn,
+.btn,
+#add_blog_modal_button {
+  padding: 6px 3rem;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #0299277d;
+  outline: none;
+  border: 1px solid #197100;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: #000000ed 2px 3px 6px;
+}
+
+.hide_modal_btn,
+#add_blog_modal_button {
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+
+.btn {
+  padding: 6px 1rem;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* modal animation key frame */
+@keyframes scale-up-hor-center {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.ac {
+  display: grid;
+}

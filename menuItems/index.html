@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body {
+            /* background: rgb(2,0,36); */
+            background: linear-gradient(180deg, rgb(0 0 0 / 92%) 40%, #ff0000 100%);
+            ;
+            height: 1000px;
+            display: flex;
+        }
+
+        .container {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 80%;
+            margin: auto;
+            /* height: 7%; */
+            border-radius: 10px;
+            /* height: 1584px; */
+            background-color: rgba(255, 255, 255, 30%);
+            backdrop-filter: blur(30px);
+            box-shadow: rgb(200 0 0) 2px 0px 50px;
+
+        }
+
+        .item_container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+        }
+
+        .img img {
+            width: 200px;
+            border-radius: 10px;
+            /* border: 5px solid rgb(142, 55, 230); */
+        }
+
+        .menu_item {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            /* background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px); */
+        }
+
+        .menu_name_price {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 20px;
+        }
+
+        .text_content {
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu_details {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tittle">
+            <h3>
+                menu item
+            </h3>
+        </div>
+
+        <div class="btn_container">
+            <!-- <button class="filter_btn" data-id="all" type="button">all</button>
+            <button class="filter_btn" data-id="breakfast" type="button">breakfast</button>
+            <button class="filter_btn" data-id="lunch" type="button">lunch</button>
+            <button class="filter_btn" data-id="shakes" type="button">shakes</button> -->
+        </div>
+
+        <div class="item_container">
+            <!-- <div class="menu_item">
+                <div class="img">
+                    <img src="./images/item-1.jpeg" alt="meal_image">
+                </div>
+
+                <div class="text_content">
+                    <div class="menu_name_price">
+                        <div class="item_name">
+                            <h3>butter milk</h3>
+                        </div>
+                        <div class="item_price">
+                            <p>$ 123.34</p>
+                        </div>
+                    </div>
+
+                    <div class="menu_details">
+                        <p class="check" id="p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nemo!
+                        </p>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+
+
+
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up basic styles for the container */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Style the header and the toggle button */
+.header_left {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.toogle_btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toogle_btn:hover {
+  background-color: #555;
+}
+
+/* Style the sidebar */
+.side_bar {
+  width: 250px;
+  background-color: #333;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform: translateX(-250px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.side_bar ul {
+  width: 100%;
+  padding: 0;
+}
+
+.side_bar ul li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.side_bar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.side_bar ul li a:hover {
+  color: #ddd;
+}
+
+/* Show the sidebar when the "show_bar" class is present */
+.show_bar {
+  transform: translateX(0);
+}
+
+/* Style the close button */
+.btn {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.close_btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+}
+
+.close_btn:hover {
+  background-color: #555;
+}

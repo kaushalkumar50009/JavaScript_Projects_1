@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hit Mosquito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="playground">
+        <img src="./mosquito_science_2GBWF58.webp" alt="mosquito iage" class="mosquito" id="mosquito"
+            onclick="hitmosquito()">
+    </div>
+    <div class="controls">
+        <h2 id="gameStatus"></h2>
+        <h3>
+            <span id="total">Total</span>
+            <div class="totalHit" id="totals">0</div>
+        </h3>
+        <button id="btn" onclick="startGame()">start Game</button>
+        <button id="reset" onclick="resetGame()">reset Game</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

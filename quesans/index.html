@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questions</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="coontainer">
+        <h3>
+            question answer
+        </h3>
+
+        <div class="section-center">
+            <!-- single question -->
+            <div class="question">
+                <!-- question tittle-->
+                <div class="question-tittle">
+                    <p> this is my question</p>
+                    <div type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <button>open</button>
+                        </span>
+                        <span class="minus-icon">
+                            <button>close</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- single question -->
+                <div class="question-text">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate culpa minima iste debitis.
+                        Pariatur aspernatur tempora aut officia cum repudiandae perferendis magni non repellat labore
+                        excepturi, ea ad voluptate? Nobis?
+                    </p>
+                </div>
+            </div>
+            <div class="question">
+                <!-- question tittle-->
+                <div class="question-tittle">
+                    <p> this is my question</p>
+                    <div type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <button>open</button>
+                        </span>
+                        <span class="minus-icon">
+                            <button>close</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- single question -->
+                <div class="question-text">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate culpa minima iste debitis.
+                        Pariatur aspernatur tempora aut officia cum repudiandae perferendis magni non repellat labore
+                        excepturi, ea ad voluptate? Nobis?
+                    </p>
+                </div>
+            </div>
+            <div class="question">
+                <!-- question tittle-->
+                <div class="question-tittle">
+                    <p> this is my question</p>
+                    <div type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <button>open</button>
+                        </span>
+                        <span class="minus-icon">
+                            <button>close</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- single question -->
+                <div class="question-text">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate culpa minima iste debitis.
+                        Pariatur aspernatur tempora aut officia cum repudiandae perferendis magni non repellat labore
+                        excepturi, ea ad voluptate? Nobis?
+                    </p>
+                </div>
+            </div>
+            <div class="question">
+                <!-- question tittle-->
+                <div class="question-tittle">
+                    <p> this is my question</p>
+                    <div type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <button>open</button>
+                        </span>
+                        <span class="minus-icon">
+                            <button>close</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- single question -->
+                <div class="question-text">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate culpa minima iste debitis.
+                        Pariatur aspernatur tempora aut officia cum repudiandae perferendis magni non repellat labore
+                        excepturi, ea ad voluptate? Nobis?
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <script>
+
+        let question = document.querySelectorAll('.question')
+
+        question.forEach(function (questions) {
+            // console.log(questions)
+            let total = questions.querySelector('.question-btn')
+            // console.log(total)
+            total.addEventListener('click', function () {
+
+                question.forEach(function (match) {
+                    if (match !== questions) {
+                        match.classList.remove('show_text')
+                    }
+                })
+
+                // total.classList.toggle('show_text')
+                questions.classList.toggle('show_text')
+            })
+        })
+
+        // // using traversing the dom
+        // let btn = document.querySelectorAll('.question-btn')
+
+        // btn.forEach(function (btns) {
+        //     // console.log(e)
+        //     btns.addEventListener('click', function (e) {
+        //         // console.log(e.currentTarget)
+        //         console.log(e.currentTarget.parentElement.parentElement)
+        //         let showText = e.currentTarget.parentElement.parentElement
+
+        //         showText.classList.toggle('show_text')
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

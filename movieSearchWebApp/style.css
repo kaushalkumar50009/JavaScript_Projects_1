@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.input_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: revert-layer;
+  align-items: center;
+}
+
+.search_bar,
+.searchBar_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 6rem;
+}
+
+.searchBar_container {
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  background-color: #002d1c;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  box-shadow: #002d1c 0px 8px 28px 29px;
+}
+.movie-list {
+  color: white;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+input[type="text"] {
+  width: 57rem;
+  height: 3rem;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #318625;
+  font-size: large;
+  letter-spacing: 1px;
+  color: #197100;
+  text-transform: capitalize;
+  max-width: 57vw;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn,
+.show_movie_btn {
+  padding: 6px 9rem;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #0299277d;
+  outline: none;
+  border: 1px solid #197100;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: #000000ed 2px 3px 6px;
+  height: 3rem;
+}
+
+.main_body {
+  min-height: calc(100vh - 14rem);
+  background-color: #011e00;
+}
+.complete_box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card_container {
+  padding: 3rem 1rem;
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  background-color: #011e00;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 21rem;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #c9fff2;
+  backdrop-filter: blur(30px);
+  box-shadow: #376f00 7px 7px 26px;
+  background-color: #012016;
+}
+
+.img {
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: #c7ff00 2px 0px 10px;
+}
+.title {
+  color: white;
+  font-size: 21px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.show_movie_btn {
+  padding: 6px 3rem;
+
+  background-color: #006218;
+}

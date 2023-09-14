@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hii</title>
+    <link rel="stylesheet" href="./css/blogPage.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="header_title">
+                kaushal
+            </h1>
+            <h1 class="add_blog" id="add_blog_modal_button">
+                <a href="./index.html">back</a>
+            </h1>
+        </div>
+        <div class="blog-details">
+            <div class="header_details">
+                <div class="title small_desc">
+                    <div id="title">
+                        <h1 id="blog-title"></h1>
+                    </div>
+                    <div id="small_desc">
+                        <p id="blog-small-desc"></p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img id="blog-image" src="" alt="">
+                </div>
+            </div>
+            <div class="full_content">
+                <!-- <p id="blog-description"></p> -->
+                <pre><p id="blog-description"></p></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the selected blog post ID from localStorage
+        const selectedBlogId = localStorage.getItem("selectedBlogId");
+        // console.log(selectedBlogId)
+        // Retrieve the stored blog data from localStorage
+        const storedData = JSON.parse(localStorage.getItem("blog-data")) || [];
+        // Find the selected blog post using the ID
+        const selectedBlog = storedData.find((data, index) => {
+            if (index === Number(selectedBlogId))
+                return data
+        });
+        // console.log(selectedBlog)
+
+        if (selectedBlog) {
+            // Update the HTML elements with the selected blog post details
+            document.getElementById("blog-image").src = selectedBlog.image;
+            document.getElementById("blog-title").textContent = selectedBlog.title;
+            document.getElementById("blog-small-desc").textContent = selectedBlog.smallDesc;
+            document.getElementById("blog-description").textContent = selectedBlog.description;
+        } else {
+            console.log("data not found")
+        }
+
+        title = selectedBlog.title;
+        const htmlTitle = document.getElementsByTagName("title")
+        const htmlTitleValue = htmlTitle[0].childNodes[0]
+        htmlTitleValue.textContent = title
+
+
+    </script>
+</body>
+
+</html>
